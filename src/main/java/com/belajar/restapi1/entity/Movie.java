@@ -15,11 +15,11 @@ public class Movie {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long ID;
   
-  private String Title;
+  private String title;
 
-  private String Desc;
+  private String desc;
 
-  private int Rating;
+  private int rating;
 
   private Date releaseDate;
 
@@ -30,21 +30,66 @@ public class Movie {
   @OneToOne(mappedBy = "movie_id")
   private Schedule schedule;
   
-  public Movie(){
-
+  public Movie(long ID, String title, String desc, int rating, Date releaseDate, LocalTime duration, String file){
+    this.ID = ID;
+    this.title = title;
+    this.desc = desc;
+    this.rating = rating;
+    this.releaseDate = releaseDate;
+    this.duration = duration;
+    this.file = file;
   }
 
-  public Movie(Long ID, String Title){
+  public Movie(Long ID, String title){
     this.ID = ID;
-    this.Title = Title;
+    this.title = title;
   }
 
   public long getmovieID(){
     return ID;
   }
 
-  public long setmovieID(long ID){
+  public void setmovieID(long ID){
     this.ID = ID;
-    return ID;
+  }
+
+  public String getTitle(){
+    return title;
+  }
+
+  public void setTitle(String title){
+    this.title = title;
+  }
+
+  public int getRating(){
+    return rating;
+  }
+
+  public void setRating(int rating){
+    this.rating = rating;
+  }
+
+  public Date getReleaseDate(){
+    return releaseDate;
+  }
+
+  public void setReleaseDate(Date releaseDate){
+    this.releaseDate = releaseDate;
+  }
+
+  public LocalTime getDuration(){
+    return duration;
+  }
+
+  public void setDuration(LocalTime duration){
+    this.duration = duration;
+  }
+
+  public String getfile(){
+    return file;
+  }
+
+  public void setfile(String file){
+    this.file = file;
   }
 }

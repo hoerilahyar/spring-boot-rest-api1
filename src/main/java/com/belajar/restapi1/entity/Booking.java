@@ -22,5 +22,23 @@ public class Booking {
   
   private String name;
 
-  
+  public Booking( String name, long schedule_id, long book_id) {
+    this.name = name;
+  }
+
+  public Long getBookingId() {
+      return ID;
+  }
+
+  public void setBookingId(Long ID) {
+      this.ID = ID;
+  }
+
+  public String getname() {
+      return name;
+  }
+
+  public void setname(String name) {
+      this.name = name;
+  }
 }

@@ -19,4 +19,33 @@ public class Theater {
   @OneToOne(mappedBy = "theater_id")
   private Schedule schedule;
   
+  public Theater(long ID, long seats, String name){
+    this.ID = ID;
+    this.seats = seats;
+    this.name = name;
+  }
+
+  public void setTheaterID(long ID){
+    this.ID = ID;
+  }
+
+  public long getTheaterID(){
+    return ID;
+  }
+
+  public void setSeats(long seats){
+    this.seats = seats;
+  }
+
+  public long getSeats(){
+    return seats;
+  }
+
+  public void setName(String name){
+    this.name = name;
+  }
+
+  public String getName(){
+    return name;
+  }
 }
