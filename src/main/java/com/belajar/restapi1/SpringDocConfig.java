@@ -12,6 +12,11 @@ public class SpringDocConfig {
 
   @Bean
   public OpenAPI BaseOpenAPI(){
-    return new OpenAPI().info(new Info().title("belajar").version("1.0.0").description("belajar rest api spring boot"));
+    return new OpenAPI().info(
+      new Info()
+                .title("belajar")
+                .version("1.0.0")
+                .description("belajar rest api spring boot")
+    );
   }
 }
