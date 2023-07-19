@@ -10,8 +10,11 @@ import com.belajar.restapi1.entity.Booking;
 import com.belajar.restapi1.service.BookingService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "Booking", description = "Booking APIs")
+@RequestMapping("/api/booking")
 public class BookingController {
 
   @Autowired
